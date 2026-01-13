@@ -32,8 +32,8 @@
       <!-- 6-DOF Free Joint -->
       <joint name="root" type="free"/>
       
-      <!-- Satellite Body (Sphere radius 0.145m) -->
-      <geom name="satellite_geom" type="sphere" size="0.145" mass="10"/>
+      <!-- Satellite Body (Box 0.29m side to match thruster positions) -->
+      <geom name="satellite_geom" type="box" size="0.145 0.145 0.145" mass="10"/>
 
       <!-- Tracking Camera attached to body? No, usually world frame tracking is better handled by viewer code -->
       

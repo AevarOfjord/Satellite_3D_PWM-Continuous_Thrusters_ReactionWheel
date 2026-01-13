@@ -374,7 +374,7 @@ def main() -> int:
         _draw_text(panel, "\n".join(label_lines), pad_x, pad_y, scale=2)
         rect = mujoco.MjrRect(left, bottom, panel_w, panel_h)
         try:
-            viewer_handle.set_images((rect, panel))
+            viewer_handle.set_images([(rect, panel)])
         except Exception:
             pass
 
@@ -474,8 +474,8 @@ def main() -> int:
             model,
             data,
             key_callback=on_key,
-            show_left_ui=False,
-            show_right_ui=False,
+            show_left_ui=True,
+            show_right_ui=True,
         )
     except RuntimeError as exc:
         msg = str(exc).lower()
